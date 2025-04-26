@@ -281,7 +281,7 @@ queueMicrotask(() => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
       envId: 'godsag-twikoo',
-      region: 'auto',
+      region: '',
       onCommentLoaded: () => {
         anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
       }
@@ -298,7 +298,7 @@ queueMicrotask(() => {
     if(!countELement) return
     twikoo.getCommentsCount({
       envId: 'godsag-twikoo',
-      region: 'auto',
+      region: '',
       urls: [window.location.pathname],
       includeReply: false
     }).then(res => {
@@ -386,7 +386,7 @@ queueMicrotask(() => {
     const runTwikoo = () => {
       twikoo.getRecentComments({
         envId: 'godsag-twikoo',
-        region: 'auto',
+        region: '',
         pageSize: 6,
         includeReply: true
       }).then(function (res) {
